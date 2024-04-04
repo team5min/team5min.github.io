@@ -1,24 +1,24 @@
 ---
-import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "../consts";
-import { Github, Scratch } from "simple-icons-astro";
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+import { Github, Scratch } from 'simple-icons-astro';
 ---
 
 <header>
   <nav>
-    <h2><a href="/">{SITE_TITLE}</a></h2>
-    <div class="internal-links">
-      <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/blog">Blog</HeaderLink>
-      <HeaderLink href="/about">About</HeaderLink>
+    <h2><a href='/'>{SITE_TITLE}</a></h2>
+    <div class='internal-links'>
+      <HeaderLink href='/'>Home</HeaderLink>
+      <HeaderLink href='/blog'>Blog</HeaderLink>
+      <HeaderLink href='/about'>About</HeaderLink>
     </div>
-    <div class="social-links">
-      <a href="https://github.com/team5min" target="_blank">
-        <span class="sr-only">GitHub</span>
+    <div class='social-links'>
+      <a href='https://github.com/team5min' target='_blank'>
+        <span class='sr-only'>GitHub</span>
         <Github />
       </a>
-      <a href="https://scratch.mit.edu/users/-5min-" target="_blank">
-        <span class="sr-only">Scratch</span>
+      <a href='https://scratch.mit.edu/users/-5min-' target='_blank'>
+        <span class='sr-only'>Scratch</span>
         <Scratch />
       </a>
     </div>
