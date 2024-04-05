@@ -7,7 +7,8 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, topEmoji } =
+  Astro.props;
 ---
 
 <html lang='ja'>
@@ -21,12 +22,21 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       }
       .hero-image {
         width: 100%;
+        position: relative;
       }
-      .hero-image img {
+      .hero-image .main_samune {
         display: block;
         margin: 0 auto;
         border-radius: 12px;
         box-shadow: var(--box-shadow);
+      }
+
+      .hero-image .emoji {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10%;
       }
       .prose {
         width: 720px;
@@ -61,7 +71,26 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         <div class='hero-image'>
           {
             heroImage && (
-              <img width={1020} height={510} src={heroImage} alt='' />
+              <>
+                <img
+                  width={1020}
+                  height={510}
+                  src={heroImage}
+                  alt=''
+                  class='main_samune'
+                />
+              </>
+            )
+          }
+
+          {
+            topEmoji && (
+              <>
+                <img
+                  src={`https://cdn.jsdelivr.net/gh/shuding/fluentui-emoji-unicode/assets/${topEmoji}_color.svg`}
+                  class='emoji'
+                />
+              </>
             )
           }
         </div>
