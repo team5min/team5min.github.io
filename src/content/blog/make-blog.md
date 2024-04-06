@@ -9,3 +9,4 @@ topEmoji: '✨'
 Astroでブログ作りました!
 
 一部[れたすさんのサイト](https://lettuce.vercel.app/)を参考にしながら作ってたりします
+ぜひScratchとGithubのフォローしてね🖐️:
